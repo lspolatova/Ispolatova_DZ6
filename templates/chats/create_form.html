@@ -1,8 +1,0 @@
-<form method="POST" {% if id %} action={% url url_var id %} {% else %} action={% url url_var %} {% endif %}>
-    {% csrf_token %}
-    {% for field in form %}
-    {{ field.label_tag }} {{ field }}
-    <br></br>
-    {% endfor %}
-    <input type="submit" value="Сохранить">
-</form>
